@@ -1,0 +1,12 @@
+pipeline {
+  agent any
+  tools {nodejs "node"}
+  stages {
+    stage('Install') {
+      steps {
+        git 'https://github.com/chirag7/demo-app.git'
+        bat 'npm install'
+      }
+    }
+  }
+}
